@@ -28,7 +28,7 @@ jobs:
 
       - name: Deploy Website to S3
         run: |
-          aws s3 sync . s3://tws-junoon \
+          aws s3 sync . s3://aryan-portfolio-bucket \
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*" \
