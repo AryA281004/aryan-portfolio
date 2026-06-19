@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan — Creative Developer</title>
+  <meta name="description" content="Aryan — Full-Stack Developer crafting extraordinary digital experiences. Specializing in React, Node.js, and immersive web design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <!-- Fallback fonts if custom unavailable -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── LOADER ── -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">&lt;Aryan /&gt;</div>
+      <div class="loader-bar"><div class="loader-progress" id="loader-progress"></div></div>
+      <span class="loader-label" id="loader-label">Initializing...</span>
+    </div>
+  </div>
+
+  <!-- ── CURSOR ── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursor-dot"></div>
+
+  <!-- ── SCROLL PROGRESS ── -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ── AURORA BACKGROUND ── -->
+  <div class="aurora">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+    <div class="aurora-orb orb-4"></div>
+  </div>
+  <div class="noise-overlay"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand" id="nav-brand">
+        <span class="brand-bracket">{</span>
+        <span class="brand-name">Aryan</span>
+        <span class="brand-bracket">}</span>
+      </a>
+      <div class="nav-center">
+        <a href="#about" class="nav-item" data-label="About">About</a>
+        <a href="#skills" class="nav-item" data-label="Skills">Skills</a>
+        <a href="#work" class="nav-item" data-label="Work">Work</a>
+        <a href="#experience" class="nav-item" data-label="Exp">Experience</a>
+        <a href="#contact" class="nav-item" data-label="Contact">Contact</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-pill" id="theme-toggle" aria-label="Toggle theme">
+          <span class="tp-icon">☀️</span>
+          <span class="tp-track"><span class="tp-thumb"></span></span>
+          <span class="tp-icon">🌙</span>
+        </button>
+        <a href="#contact" class="nav-cta" id="nav-hire-btn">Hire me →</a>
+        <button class="burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════
+       HERO
+  ════════════════════════════ -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot"></span>
+        <span>Open to work · Based in India</span>
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="line"><span class="line-inner">Crafting</span></span>
+        <span class="line accent-line"><span class="line-inner">Digital</span></span>
+        <span class="line"><span class="line-inner">Experiences</span></span>
+      </h1>
+
+      <p class="hero-sub">
+        I'm <strong>Aryan</strong> — a Full-Stack Developer who transforms
+        ideas into <em>beautiful, fast, and memorable</em> web products.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#work" class="btn-glow" id="hero-explore-btn">
+          <span>Explore Work</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn-ghost" id="hero-contact-btn">Let's Talk</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-pill">
+          <span class="meta-num" data-count="25">0</span>
+          <span class="meta-unit">+</span>
+          <span class="meta-txt">Projects</span>
+        </div>
+        <div class="meta-sep"></div>
+        <div class="meta-pill">
+          <span class="meta-num" data-count="3">0</span>
+          <span class="meta-unit">+</span>
+          <span class="meta-txt">Years</span>
+        </div>
+        <div class="meta-sep"></div>
+        <div class="meta-pill">
+          <span class="meta-num" data-count="98">0</span>
+          <span class="meta-unit">%</span>
+          <span class="meta-txt">Satisfaction</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="avatar-frame" id="avatar-frame">
+        <div class="frame-glow"></div>
+        <div class="frame-ring-glow"></div>
+        <div class="frame-ring r1"></div>
+        <div class="frame-ring r2"></div>
+        <img src="avatar.png" alt="Aryan" class="avatar" id="avatar-img" />
+        <div class="avatar-chips">
+          <div class="chip chip-1">⚡ React</div>
+          <div class="chip chip-2">🔥 Node.js</div>
+          <div class="chip chip-3">🎨 UI/UX</div>
+          <div class="chip chip-4">☁️ Cloud</div>
+        </div>
+        <div class="frame-badge">
+          <span class="badge-pulse"></span>
+          Available Now
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"><div class="scroll-line-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       MARQUEE STRIP
+  ════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>React</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>TypeScript</span><span class="sep">✦</span>
+      <span>Next.js</span><span class="sep">✦</span>
+      <span>GraphQL</span><span class="sep">✦</span>
+      <span>PostgreSQL</span><span class="sep">✦</span>
+      <span>Docker</span><span class="sep">✦</span>
+      <span>AWS</span><span class="sep">✦</span>
+      <span>Figma</span><span class="sep">✦</span>
+      <span>MongoDB</span><span class="sep">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>React</span><span class="sep">✦</span>
+      <span>Node.js</span><span class="sep">✦</span>
+      <span>TypeScript</span><span class="sep">✦</span>
+      <span>Next.js</span><span class="sep">✦</span>
+      <span>GraphQL</span><span class="sep">✦</span>
+      <span>PostgreSQL</span><span class="sep">✦</span>
+      <span>Docker</span><span class="sep">✦</span>
+      <span>AWS</span><span class="sep">✦</span>
+      <span>Figma</span><span class="sep">✦</span>
+      <span>MongoDB</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════
+       ABOUT
+  ════════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left">
+          <div class="section-label">Who I Am</div>
+          <h2 class="section-heading">
+            Building the <span class="text-stroke">web</span><br/>
+            of <em>tomorrow</em>
+          </h2>
+          <p class="about-body">
+            I'm a passionate <strong>Full-Stack Developer</strong> who obsesses over clean
+            code, performant systems, and pixel-perfect interfaces. I bridge the gap between
+            design and engineering — making things that <em>work beautifully</em>.
+          </p>
+          <p class="about-body">
+            When I'm not coding, I'm exploring design systems, contributing to open source,
+            or deep-diving into the latest web platform capabilities.
+          </p>
+          <a href="#" class="btn-outline-pill" id="about-resume-btn">
+            Download CV
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2v7M3 6l4 4 4-4M2 11h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="about-right">
+          <div class="info-card-grid">
+            <div class="info-card" id="info-loc">
+              <div class="ic-icon">📍</div>
+              <div class="ic-label">Location</div>
+              <div class="ic-val">India</div>
+            </div>
+            <div class="info-card" id="info-exp">
+              <div class="ic-icon">💼</div>
+              <div class="ic-label">Experience</div>
+              <div class="ic-val">3+ Years</div>
+            </div>
+            <div class="info-card" id="info-edu">
+              <div class="ic-icon">🎓</div>
+              <div class="ic-label">Degree</div>
+              <div class="ic-val">B.Tech CS</div>
+            </div>
+            <div class="info-card" id="info-status">
+              <div class="ic-icon status-live">🟢</div>
+              <div class="ic-label">Status</div>
+              <div class="ic-val">Available</div>
+            </div>
+          </div>
+          <div class="about-quote">
+            <div class="quote-mark">"</div>
+            <p>Great software isn't just functional — it's an experience people <em>feel</em>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       SKILLS
+  ════════════════════════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-label centered">Arsenal</div>
+      <h2 class="section-heading centered">My <span class="text-stroke">Tech</span> Stack</h2>
+
+      <div class="skills-board">
+        <div class="skill-col">
+          <div class="skill-col-title">Frontend</div>
+          <div class="sk" id="sk-html"><span>🌐</span> HTML5 <div class="sk-bar" style="--w:96%"></div></div>
+          <div class="sk" id="sk-css"><span>🎨</span> CSS / SCSS <div class="sk-bar" style="--w:94%"></div></div>
+          <div class="sk" id="sk-js"><span>⚡</span> JavaScript <div class="sk-bar" style="--w:92%"></div></div>
+          <div class="sk" id="sk-react"><span>⚛️</span> React <div class="sk-bar" style="--w:90%"></div></div>
+          <div class="sk" id="sk-ts"><span>🔷</span> TypeScript <div class="sk-bar" style="--w:84%"></div></div>
+          <div class="sk" id="sk-next"><span>▲</span> Next.js <div class="sk-bar" style="--w:82%"></div></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-title">Backend</div>
+          <div class="sk" id="sk-node"><span>🟢</span> Node.js <div class="sk-bar" style="--w:88%"></div></div>
+          <div class="sk" id="sk-py"><span>🐍</span> Python <div class="sk-bar" style="--w:76%"></div></div>
+          <div class="sk" id="sk-gql"><span>🔮</span> GraphQL <div class="sk-bar" style="--w:70%"></div></div>
+          <div class="sk" id="sk-rest"><span>🚂</span> REST APIs <div class="sk-bar" style="--w:92%"></div></div>
+        </div>
+        <div class="skill-col">
+          <div class="skill-col-title">Data &amp; Cloud</div>
+          <div class="sk" id="sk-pg"><span>🐘</span> PostgreSQL <div class="sk-bar" style="--w:82%"></div></div>
+          <div class="sk" id="sk-mongo"><span>🍃</span> MongoDB <div class="sk-bar" style="--w:80%"></div></div>
+          <div class="sk" id="sk-docker"><span>🐳</span> Docker <div class="sk-bar" style="--w:68%"></div></div>
+          <div class="sk" id="sk-aws"><span>☁️</span> AWS <div class="sk-bar" style="--w:64%"></div></div>
+          <div class="sk" id="sk-git"><span>🌿</span> Git <div class="sk-bar" style="--w:95%"></div></div>
+          <div class="sk" id="sk-figma"><span>🎭</span> Figma <div class="sk-bar" style="--w:78%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       WORK / PROJECTS
+  ════════════════════════════ -->
+  <section id="work" class="section work-section">
+    <div class="container">
+      <div class="section-label">Selected Work</div>
+      <div class="work-header">
+        <h2 class="section-heading">Projects that <span class="text-stroke">matter</span></h2>
+        <div class="work-filters">
+          <button class="wf-btn active" data-f="all" id="wf-all">All</button>
+          <button class="wf-btn" data-f="fullstack" id="wf-fs">Full-Stack</button>
+          <button class="wf-btn" data-f="frontend" id="wf-fe">Frontend</button>
+          <button class="wf-btn" data-f="backend" id="wf-be">Backend</button>
+        </div>
+      </div>
+
+      <div class="projects-masonry" id="projects-grid">
+
+        <div class="pcard pcard-large" data-cat="fullstack" id="pc-taskmaster">
+          <div class="pcard-spotlight"></div>
+          <div class="pcard-bg" style="--accent:#7c3aed"></div>
+          <div class="pcard-content">
+            <div class="pcard-top">
+              <span class="pcard-cat">Full-Stack · Featured</span>
+              <div class="pcard-links">
+                <a href="#" class="plink" aria-label="Live demo">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="#" class="plink" aria-label="Source code">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="pcard-emoji">✅</div>
+            <h3 class="pcard-title">TaskMaster Pro</h3>
+            <p class="pcard-desc">Real-time collaborative task manager with drag-and-drop boards, team workspaces, live cursors, and deep analytics powered by PostgreSQL.</p>
+            <div class="pcard-tags">
+              <span>Next.js</span><span>PostgreSQL</span><span>Socket.io</span><span>Redis</span>
+            </div>
+          </div>
+          <div class="pcard-hover-line"></div>
+        </div>
+
+        <div class="pcard" data-cat="fullstack" id="pc-shopflow">
+          <div class="pcard-spotlight"></div>
+          <div class="pcard-bg" style="--accent:#06b6d4"></div>
+          <div class="pcard-content">
+            <div class="pcard-top">
+              <span class="pcard-cat">Full-Stack</span>
+              <div class="pcard-links">
+                <a href="#" class="plink" aria-label="Live demo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="#" class="plink" aria-label="Source"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+              </div>
+            </div>
+            <div class="pcard-emoji">🛒</div>
+            <h3 class="pcard-title">ShopFlow</h3>
+            <p class="pcard-desc">Feature-rich e-commerce with real-time inventory, Stripe integration, and a powerful admin dashboard.</p>
+            <div class="pcard-tags"><span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span></div>
+          </div>
+          <div class="pcard-hover-line"></div>
+        </div>
+
+        <div class="pcard" data-cat="frontend" id="pc-weather">
+          <div class="pcard-spotlight"></div>
+          <div class="pcard-bg" style="--accent:#f59e0b"></div>
+          <div class="pcard-content">
+            <div class="pcard-top">
+              <span class="pcard-cat">Frontend</span>
+              <div class="pcard-links">
+                <a href="#" class="plink" aria-label="Live demo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="#" class="plink" aria-label="Source"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+              </div>
+            </div>
+            <div class="pcard-emoji">🌤️</div>
+            <h3 class="pcard-title">WeatherVibe</h3>
+            <p class="pcard-desc">Cinematic weather dashboard with animated sky backgrounds that respond to real-time conditions.</p>
+            <div class="pcard-tags"><span>React</span><span>Canvas API</span><span>Weather API</span></div>
+          </div>
+          <div class="pcard-hover-line"></div>
+        </div>
+
+        <div class="pcard" data-cat="backend" id="pc-api">
+          <div class="pcard-spotlight"></div>
+          <div class="pcard-bg" style="--accent:#10b981"></div>
+          <div class="pcard-content">
+            <div class="pcard-top">
+              <span class="pcard-cat">Backend</span>
+              <div class="pcard-links">
+                <a href="#" class="plink" aria-label="Docs"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="#" class="plink" aria-label="Source"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+              </div>
+            </div>
+            <div class="pcard-emoji">🔗</div>
+            <h3 class="pcard-title">LinkVault API</h3>
+            <p class="pcard-desc">RESTful bookmark API with OAuth2, rate limiting, analytics, and full OpenAPI documentation.</p>
+            <div class="pcard-tags"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>JWT</span></div>
+          </div>
+          <div class="pcard-hover-line"></div>
+        </div>
+
+        <div class="pcard pcard-wide" data-cat="fullstack" id="pc-chat">
+          <div class="pcard-spotlight"></div>
+          <div class="pcard-bg" style="--accent:#ec4899"></div>
+          <div class="pcard-content">
+            <div class="pcard-top">
+              <span class="pcard-cat">Full-Stack</span>
+              <div class="pcard-links">
+                <a href="#" class="plink" aria-label="Demo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="#" class="plink" aria-label="Source"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+              </div>
+            </div>
+            <div class="pcard-emoji">💬</div>
+            <h3 class="pcard-title">ChatSphere</h3>
+            <p class="pcard-desc">Real-time encrypted messaging with rooms, file sharing, and E2E encryption. Handles 10k+ concurrent connections.</p>
+            <div class="pcard-tags"><span>React</span><span>Socket.io</span><span>Node.js</span><span>MongoDB</span><span>WebRTC</span></div>
+          </div>
+          <div class="pcard-hover-line"></div>
+        </div>
+
+        <div class="pcard" data-cat="frontend" id="pc-art">
+          <div class="pcard-spotlight"></div>
+          <div class="pcard-bg" style="--accent:#8b5cf6"></div>
+          <div class="pcard-content">
+            <div class="pcard-top">
+              <span class="pcard-cat">Frontend</span>
+              <div class="pcard-links">
+                <a href="#" class="plink" aria-label="Demo"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                <a href="#" class="plink" aria-label="Source"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+              </div>
+            </div>
+            <div class="pcard-emoji">🎨</div>
+            <h3 class="pcard-title">ArtGallery</h3>
+            <p class="pcard-desc">Masonry art portfolio with lazy loading, lightbox, and smooth Framer Motion transitions.</p>
+            <div class="pcard-tags"><span>TypeScript</span><span>React</span><span>Framer</span></div>
+          </div>
+          <div class="pcard-hover-line"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       EXPERIENCE
+  ════════════════════════════ -->
+  <section id="experience" class="section exp-section">
+    <div class="container">
+      <div class="section-label">Journey</div>
+      <h2 class="section-heading">Work <span class="text-stroke">Experience</span></h2>
+
+      <div class="exp-list">
+        <div class="exp-item" id="exp-1">
+          <div class="exp-left">
+            <div class="exp-year">2024 – Now</div>
+            <div class="exp-line"><div class="exp-dot"></div></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Senior Frontend Developer</h3>
+                <span class="exp-company">TechNova Solutions</span>
+              </div>
+              <span class="exp-badge">Full-time</span>
+            </div>
+            <p class="exp-desc">Leading frontend architecture for a SaaS platform serving 50k+ users. Reduced bundle size by 40% and improved core web vitals to pass all thresholds.</p>
+            <div class="exp-skills"><span>React</span><span>TypeScript</span><span>GraphQL</span><span>Webpack</span></div>
+          </div>
+        </div>
+
+        <div class="exp-item" id="exp-2">
+          <div class="exp-left">
+            <div class="exp-year">2023 – 24</div>
+            <div class="exp-line"><div class="exp-dot"></div></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Full-Stack Developer</h3>
+                <span class="exp-company">Freelance &amp; Startups</span>
+              </div>
+              <span class="exp-badge">Contract</span>
+            </div>
+            <p class="exp-desc">Delivered 10+ end-to-end web applications across e-commerce, fintech, and SaaS. Every project on time, every client satisfied.</p>
+            <div class="exp-skills"><span>Next.js</span><span>Node.js</span><span>PostgreSQL</span><span>Stripe</span></div>
+          </div>
+        </div>
+
+        <div class="exp-item" id="exp-3">
+          <div class="exp-left">
+            <div class="exp-year">2022 – 23</div>
+            <div class="exp-line"><div class="exp-dot"></div></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3 class="exp-role">Junior Developer</h3>
+                <span class="exp-company">Digital Craft Agency</span>
+              </div>
+              <span class="exp-badge">Full-time</span>
+            </div>
+            <p class="exp-desc">Built responsive interfaces and REST APIs in an Agile team. Shipped features weekly, mentored interns, and contributed to the component library.</p>
+            <div class="exp-skills"><span>React</span><span>Express</span><span>MongoDB</span><span>Figma</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       CONTACT
+  ════════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-left">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-heading">Let's build<br/><span class="text-stroke">something</span><br/>great together</h2>
+          <p class="contact-sub">Have a project? A question? Just want to say hi? My inbox is always open.</p>
+
+          <div class="contact-links">
+            <a href="mailto:aryan@email.com" class="clink" id="clink-email">
+              <div class="clink-icon">📧</div>
+              <div>
+                <span class="clink-label">Email</span>
+                <span class="clink-val">aryan@email.com</span>
+              </div>
+              <svg class="clink-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#" class="clink" id="clink-linkedin">
+              <div class="clink-icon">💼</div>
+              <div>
+                <span class="clink-label">LinkedIn</span>
+                <span class="clink-val">linkedin.com/in/aryan</span>
+              </div>
+              <svg class="clink-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+            <a href="#" class="clink" id="clink-github">
+              <div class="clink-icon">💻</div>
+              <div>
+                <span class="clink-label">GitHub</span>
+                <span class="clink-val">github.com/aryan</span>
+              </div>
+              <svg class="clink-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 10L11 5M11 5H7M11 5V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" placeholder="Your name" required />
+            </div>
+            <div class="cf-field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" placeholder="you@email.com" required />
+            </div>
+          </div>
+          <div class="cf-field">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" placeholder="What's this about?" />
+          </div>
+          <div class="cf-field">
+            <label for="cf-msg">Message</label>
+            <textarea id="cf-msg" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button type="submit" class="btn-glow full" id="cf-submit">
+            <span class="btn-text">Send Message 🚀</span>
+            <span class="btn-spinner" style="display:none">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" class="spin"><circle cx="9" cy="9" r="7" stroke="rgba(255,255,255,.3)" stroke-width="2"/><path d="M2 9a7 7 0 017-7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+              Sending…
+            </span>
+          </button>
+          <div class="cf-success" id="cf-success">✅ Sent! I'll reply within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════
+       FOOTER
+  ════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-brand">&lt;Aryan /&gt;</span>
+        <p class="footer-copy">Designed &amp; built by Aryan · © 2026 · All rights reserved</p>
+        <a href="#home" class="footer-top" id="footer-top-btn" aria-label="Back to top">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 15V5M5 10l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
